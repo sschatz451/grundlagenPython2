@@ -1,20 +1,22 @@
 # Primzahl
 # If Eingabe ist Primzahl
 # Sebastian
-eingabe = input("Bitte Zahl eingeben: ")
-counter = 0
-x = True
-if (zahl <= 1):
-	print(zahl, "ist keine gültige eingabe.")
-else:
-	while(x):
-		if (zahl % i == 0):
-			counter = 1
-		if (i == 1):
-			x = False
-			zahl = zahl+1
+def isPrime(n):
 
-if (counter == 1):
-	print(zahl, "ist keine Primzahl.")
+	if (n <= 1):
+		return False
+
+	for p in range(2,n):
+		if (n % p == 0):
+			return False
+		else:
+			return True
+
+print("Willkommen beim Primzahltester")
+z = input("Bitte Zahl eingeben: ")
+z = int(z)
+print("\n")
+if ( isPrime(z)):
+	print(z, "ist eine Primzahl.")
 else:
-	print(zahl, "ist eine Primzahl.")
+	print(z, "ist keine Primzahl.")
