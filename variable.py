@@ -18,7 +18,10 @@ while(x):
 	if (aktion == "*"):
 		ausgabe = int(eingabe1) * int(eingabe2)
 	if (aktion == "/"):
-		ausgabe = int(eingabe1) / int(eingabe2)
+		if (eingabe2 == 0):
+			print("Fehler, keine Division durch 0 möglich!")
+		else:
+			ausgabe = int(eingabe1) / int(eingabe2)
 		
 	print(eingabe1, aktion, eingabe2, " = ", ausgabe)
 	z = True
